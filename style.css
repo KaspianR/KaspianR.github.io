@@ -397,6 +397,18 @@ body {
 	padding: 3rem calc((100% - var(--center-width)) / 2);
 	color: white;
 	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+}
+
+#footer > *:first-child {
+	color: #b6b6b6;
+	text-decoration: none;
+}
+
+#footer > *:last-child {
+	color: #b6b6b6;
+	text-align: right;
 }
 
 @media only screen and (max-width: 900px) {
@@ -452,5 +464,25 @@ body {
 
 	.game-project > *:last-child {
 		grid-row: 1 / 2;
+	}
+
+	#fifth-section {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		row-gap: 2rem;
+	}
+
+	#footer {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		row-gap: 2rem;
+	}
+
+	#footer > * {
+		text-align: center !important;
+	}
+
+	#footer > *:last-child > br {
+		display: none;
 	}
 }
