@@ -78,22 +78,22 @@ body {
 	color: inherit;
 }
 
-#first-section {
+#landingSection {
 	padding: 15vh calc((100% - var(--center-width)) / 2) 0 calc((100% - var(--center-width)) / 2);
 	display: grid;
 	grid-template-columns: 1.3fr 0.7fr;
 	column-gap: 2rem;
 }
 
-#first-section > * {
+#landingSection > * {
 	height: 100%;
 }
 
-#first-section-left-content {
+#landingSection-left-content {
 	padding-top: 3rem;
 }
 
-#first-section-left-content > *:nth-child(1) {
+#landingSection-left-content > *:nth-child(1) {
 	font-size: 4rem;
 	margin-bottom: 0.5rem;
 }
@@ -117,18 +117,18 @@ body {
 	margin-right: 0rem;
 }
 
-#first-section-left-content > *:nth-child(2) {
+#landingSection-left-content > *:nth-child(2) {
 	font-size: 1.75rem;
 }
 
-#first-section-left-content > *:nth-child(3) {
+#landingSection-left-content > *:nth-child(3) {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	margin-top: 0.5rem;
 }
 
-#first-section-left-content > *:nth-child(3) > * {
+#landingSection-left-content > *:nth-child(3) > * {
 	font-size: 1.25rem;
 	text-decoration: none;
 	color: inherit;
@@ -142,58 +142,58 @@ body {
 	background-clip: text;
 }
 
-#first-section-right-content {
+#landingSection-right-content {
 	position: relative;
 }
 
-#first-section-right-content > img {
+#landingSection-right-content > img {
 	height: 100%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
 
-#second-section {
+#aboutMeSection {
 	background-color: var(--contrast-color);
 	padding: 3rem calc((100% - var(--center-width)) / 2);
 	color: white;
 	text-align: center;
 }
 
-#second-section > *:nth-child(1) > *:nth-child(1) {
+#aboutMeSection > *:nth-child(1) > *:nth-child(1) {
 	font-size: 1.75rem;
 	margin-bottom: 0.5rem;
 }
 
-#second-section > *:nth-child(1) > *:nth-child(2) {
+#aboutMeSection > *:nth-child(1) > *:nth-child(2) {
 	font-size: 1.25rem;
 }
 
-#second-section > *:nth-child(2) {
+#aboutMeSection > *:nth-child(2) {
 	margin-top: 2rem;
 	display: grid;
 	grid-template-columns: 1fr 2px 1fr;
 	column-gap: 2rem;
 }
 
-#second-section > *:nth-child(2) > *:nth-child(2n+1) {
+#aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) {
 	width: 100%;
 	height: 100%;
 }
 
-#second-section > *:nth-child(2) > *:nth-child(2n+1) > *:nth-child(1) {
+#aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) > *:nth-child(1) {
 	margin-bottom: 0.5rem;
 }
 
-#second-section > *:nth-child(2) > *:nth-child(2n+1) > *:nth-child(2) {
+#aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) > *:nth-child(2) {
 	font-size: 1.1rem;
 }
 
-#second-section > *:nth-child(2) > *:nth-child(2n+1) a {
+#aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) a {
 	color: inherit;
 }
 
-#second-section > *:nth-child(2) > *:nth-child(2n) {
+#aboutMeSection > *:nth-child(2) > *:nth-child(2n) {
 	width: 100%;
 	height: calc(100% - 2rem);
 	background-color: var(--background-color-1);
@@ -201,11 +201,11 @@ body {
 	margin: 1rem 0;
 }
 
-#second-section > *:nth-child(2) > * > *:nth-child(1) {
+#aboutMeSection > *:nth-child(2) > * > *:nth-child(1) {
 	text-align: center;
 }
 
-#third-section {
+#projectsSection {
 	padding: 3rem calc((100% - var(--center-width)) / 2);
 }
 
@@ -222,7 +222,7 @@ body {
 	margin-bottom: 2rem;
 }
 
-#third-section > *:last-child {
+#projectsSection > *:last-child {
 	width: 100%;
 }
 
@@ -333,11 +333,11 @@ body {
 	right: 0;
 }
 
-#fourth-section {
+#specializationSection {
 	padding: 0 calc((100% - var(--center-width)) / 2) 3rem calc((100% - var(--center-width)) / 2);
 }
 
-#fifth-section {
+#contactSection {
 	background-color: var(--contrast-color);
 	color: white;
 	padding: 3rem calc((100% - var(--center-width)) / 2);
@@ -346,29 +346,29 @@ body {
 	column-gap: 2rem;
 }
 
-#fifth-section > *:first-child > *:nth-child(1) {
+#contactSection > *:first-child > *:nth-child(1) {
 	margin-bottom: 1rem;
 }
 
-#fifth-section > *:first-child > *:nth-child(2) {
+#contactSection > *:first-child > *:nth-child(2) {
 	font-size: 1.1rem;
 }
 
-#fifth-section > *:first-child > *:nth-child(3) {
+#contactSection > *:first-child > *:nth-child(3) {
 	font-size: 1.1rem;
 }
 
-#fifth-section > *:first-child > *:nth-child(3) > a {
+#contactSection > *:first-child > *:nth-child(3) > a {
 	color: inherit;
 }
 
-#fifth-section > *:first-child > *:nth-child(4) {
+#contactSection > *:first-child > *:nth-child(4) {
 	margin-top: 3rem;
 	font-size: 1.1rem;
 }
 
-#fifth-section > *:last-child > form > input,
-#fifth-section > *:last-child > form > textarea {
+#contactSection > *:last-child > form > input,
+#contactSection > *:last-child > form > textarea {
 	padding: 12px 20px;
 	width: 100%;
 	border: none;
@@ -376,17 +376,17 @@ body {
 	margin: 0.25rem 0 0.75rem 0;
 }
 
-#fifth-section > *:last-child > form > textarea {
+#contactSection > *:last-child > form > textarea {
 	resize: none;
 	height: 8rem;
 }
 
-#fifth-section > *:last-child > form > input:focus,
-#fifth-section > *:last-child > form > textarea:focus {
+#contactSection > *:last-child > form > input:focus,
+#contactSection > *:last-child > form > textarea:focus {
 	outline: none;
 }
 
-#fifth-section > *:last-child > form > input[type=submit] {
+#contactSection > *:last-child > form > input[type=submit] {
 	background: white;
 	font-family: inherit;
 	font-weight: bold;
@@ -426,27 +426,27 @@ body {
 		gap: 0;
 	}
 
-	#first-section {
+	#landingSection {
 		display: block;
 	}
 
-	#first-section-right-content {
+	#landingSection-right-content {
 		display: hidden;
 	}
 
-	#first-section-left-content > *:nth-child(1) {
+	#landingSection-left-content > *:nth-child(1) {
 		font-size: 2.5rem;
 	}
 
-	#first-section-left-content > *:nth-child(2) {
+	#landingSection-left-content > *:nth-child(2) {
 		font-size: 1.25rem;
 	}
 
-	#first-section-left-content > *:nth-child(3) > * {
+	#landingSection-left-content > *:nth-child(3) > * {
 		font-size: 1.1rem;
 	}
 
-	#second-section > *:nth-child(2) {
+	#aboutMeSection > *:nth-child(2) {
 		grid-template-rows: auto 0px auto;
 		row-gap: 1rem;
 		grid-template-columns: auto;
@@ -466,7 +466,7 @@ body {
 		grid-row: 1 / 2;
 	}
 
-	#fifth-section {
+	#contactSection {
 		grid-template-columns: auto;
 		grid-template-rows: auto auto;
 		row-gap: 2rem;
