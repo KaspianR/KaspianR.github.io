@@ -287,6 +287,7 @@ body {
 	font-family: inherit;
 	border: 2px solid black;
 	font-weight: bold;
+	color: black;
 }
 
 .game-project > *:first-child > *:nth-child(3) > * > * {
@@ -390,6 +391,7 @@ body {
 	background: white;
 	font-family: inherit;
 	font-weight: bold;
+	color: black;
 }
 
 #footer {
