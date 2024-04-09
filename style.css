@@ -646,7 +646,7 @@ body {
 	}
 
 	#final-notes-section {
-		grid-template-columns: auto;
+		grid-template-columns: 100%;
 		grid-template-rows: auto auto;
 	}
 
