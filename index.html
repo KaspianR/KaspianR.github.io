@@ -13,8 +13,8 @@
 		<link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 		<meta property="og:title" content="Kaspian Ringqvist - Portfolio" />
 		<meta property="og:description"
-			content="I am a game developer who have been programming for the better part of a decade and who specializes in developing gameplay and tools." />
-		<meta property="og:type" content="video.movie" />
+			content="I am a game developer and student at The Game Assembly who have been programming for the better part of a decade and who specializes in developing gameplay and tools." />
+		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://www.kaspianringqvist.se/" />
 		<meta property="og:image" content="https://www.kaspianringqvist.se/assets/og_image.png" />
 	</head>
@@ -77,14 +77,14 @@
 							mobile games to audio and collision systems.</p>
 					</div>
 				</div>
-				<div>
+				<!--<div>
 					<div>
 
 					</div>
 				</div>
 				<div id="about-me-expand-section">
 					<button class="expand-button">Expand <i class="fa-solid fa-chevron-down"></i></button>
-				</div>
+				</div>-->
 			</section>
 			<section id="projectsSection">
 				<div class="section-header">
@@ -338,7 +338,126 @@
 					<h1>Specialization</h1>
 					<div></div>
 				</div>
-				<p style="text-align: center;">Coming soon</p>
+				<div id="specialization-div">
+					<h2 id="specialization-background-header">Background</h2>
+					<p id="specialization-background">For my specialization I decided to delve deeper into tools
+						creation by expanding on an idea I had during game project 4. This idea was a level exporter for
+						Unity that wouldn't just export your level with a button but notice the user pressing play and
+						doing so automatically in addition to generating and/or copying many other necessary
+						files.<br><br>I knew I wanted to do something to do with tools as I hadn't gotten to do that
+						very much before this point but this idea also felt both fun and challenging as it would expose
+						me to several things I hadn't done before and left a lot of room for trying to improve
+						convenience and ease of use which I enjoy trying to maximise.</p>
+					<h2 id="specialization-description-header">The concrete idea</h2>
+					<p id="specialization-description">I wanted to create a level exporter for Unity that focused
+						heavily on convenience and ease of use and even simplified parts of our pipeline. I wanted to
+						design it in such a way that it could work for nearly any project but decided to export the
+						files in a way that would work for our custom engine as I was familiar with it and figured it
+						would make it easy to test and structure the tool.</p>
+					<h2 id="specialization-steps-header">A step by step guide covering what my exporter does</h2>
+					<div id="specialization-steps">
+						<div>
+							<div></div>
+							<div></div>
+						</div>
+						<div>
+							<h3>Export level</h3>
+						</div>
+						<div>
+							<div></div>
+						</div>
+						<div>
+							<ul>
+								<li><b>I created my own way to save data to JSON.</b> There are a whole number of
+									prebuilt ways to do this (including one that comes with Unity) but none really
+									worked for my purposes and I also wanted more of a say in how objects are stored.
+								</li>
+								<li><b>I used reflection to get all fields and properties of any class</b> and save it,
+									no matter if it was built in as part of Unity or custom made. Our engine is built on
+									a component system so I wanted the exporter to easily support creating components in
+									Unity that just stored data and exported that data to be used in the game.</li>
+								<li><b>I hard coded some commonly used components.</b> This allowed me to add more
+									advanced functionality for those or display them in custom way for convience.</li>
+							</ul>
+						</div>
+						<div>
+							<div></div>
+							<div></div>
+						</div>
+						<div>
+							<h3>Prepare files</h3>
+						</div>
+						<div>
+							<div></div>
+						</div>
+						<div>
+							<ul>
+								<li>
+									<b>I copy needed files from the asset folder in Unity to the game's asset
+										folder.</b> This was used for meshes and textures since those are used in both
+									places and the graphic artists appreciated only having to place their files in one
+									folder as opposed to two.
+									<ul>
+										<li><b>I also use a command line utility to convert the PNGs to DDS files.</b>
+											Our engine uses <code>.dds</code> but our artists create their textures in
+											<code>.png</code> which is what Unity uses so not having to convert it every
+											time saved them time. For bonus points, the command line utility used will
+											be downloaded to the users computer if they don't have it installed instead
+											of having to do so manually or keeping it in the files you'd push to
+											perforce.
+										</li>
+									</ul>
+								</li>
+								<li><b>I create JSON files for all materials.</b> Our engine uses JSON files for each
+									material to keep track of all its textures, how metallic it is, etc. and creating
+									that manually was a pain and caused a lot of texture. We did create a tool for it in
+									our editor that we used for the game projects but I figured I'd add it to my tool as
+									well.</li>
+								<li><b>I keep track of the exported files in a JSON file.</b> This makes the process a
+									lot faster and prevents unused files staying in the game.</li>
+							</ul>
+						</div>
+						<div>
+							<div></div>
+							<div></div>
+						</div>
+						<div>
+							<h3>Start game</h3>
+						</div>
+						<div></div>
+						<div>
+							<ul>
+								<li><b>I start the game automatically.</b> I start the game correctly right from the
+									editor and even pass along what level we were just in so that that level can be
+									started without having to go through the level select.</li>
+								<li><b>Optionally, the things logged to the game console can be sent to the Unity
+										console.</b> In case of crashes and similar this is sometimes useful.</li>
+							</ul>
+						</div>
+					</div>
+					<div id="final-notes-section">
+						<div>
+							<h2>How did it go?</h2>
+							<p>Creating the tool went very well and didn't cause me any major issues. I initially tried
+								to use Unity's built-in JSON utilities which didn't really work for what I wanted to do
+								and my attempt to use a different one also didn't work because Unity blocks it (probably
+								to encourage the usage of their one) so there I lost some time but that was probably the
+								biggest issue I encountered and didn't bother me as it gave me a chance to build my own
+								which was a good learning opportunity.<br><br>The only other thing I can really think of
+								that became a problem is that the tool can be a bit slow sometimes, especially when
+								converting textures to DDS, so if I was to continue working on it I would definetly try
+								to improve that either by looking at more efficent ways to use the converter or only
+								export it when something has changed.</p>
+						</div>
+						<div>
+							<iframe src="https://www.youtube.com/embed/dmEbWYsf1LE"
+								title="Specialisering Showcase - Kaspian Ringqvist" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							<p>Showcase</p>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section id="contactSection">
 				<div>
