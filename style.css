@@ -231,7 +231,7 @@ body {
 }
 
 #projectsSection {
-	padding: 3rem calc((100% - var(--center-width)) / 2);
+	padding: 3rem calc((100% - var(--center-width)) / 2) 0 calc((100% - var(--center-width)) / 2);
 }
 
 .section-header > *:nth-child(1) {
@@ -411,7 +411,7 @@ body {
 }
 
 #specializationSection {
-	padding: 0 calc((100% - var(--center-width)) / 2) 3rem calc((100% - var(--center-width)) / 2);
+	padding: 3rem calc((100% - var(--center-width)) / 2);
 	line-height: 1.3em;
 }
 
