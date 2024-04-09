@@ -2,9 +2,9 @@
 	document.getElementById("nav-bar").style.borderColor = this.scrollY === 0 ? `transparent` : `black`;
 });
 
-[...document.getElementsByClassName("project-expand-button")].forEach(e => {
+[...document.getElementsByClassName("expand-button")].forEach(e => {
 	e.addEventListener("click", ev => {
-		const section = e.parentElement.parentElement.children[1];
+		const section = [...e.parentElement.parentElement.children].at(e.parentElement.id === "about-me-expand-section" ? -2 : 1);
 
 		if (section.style.height) {
 			section.style.height = "";

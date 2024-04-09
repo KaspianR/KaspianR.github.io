@@ -205,6 +205,31 @@ body {
 	text-align: center;
 }
 
+#about-me-expand-section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+#about-me-expand-section > * {
+	background: white;
+	border: none;
+}
+
+.expand-button {
+	padding: 0.5rem 1rem;
+	background: none;
+	font-family: inherit;
+	border: 2px solid black;
+	font-weight: bold;
+	color: black;
+}
+
+.expand-button > * {
+	transition: transform 0.2s ease;
+}
+
 #projectsSection {
 	padding: 3rem calc((100% - var(--center-width)) / 2);
 }
@@ -224,6 +249,17 @@ body {
 
 #projectsSection > *:last-child {
 	width: 100%;
+}
+
+.games-missing-text {
+	color: var(--text-color-3);
+	font-style: italic;
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+.games-missing-text + .game-project {
+	margin-top: 2rem;
 }
 
 .game-project {
@@ -274,24 +310,64 @@ body {
 	transition: height 0.2s ease;
 }
 
+.game-info-row {
+	display: flex;
+	justify-content: space-evenly;
+	font-weight: bold;
+	margin-bottom: 0.75rem;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+.pitch-blockquote {
+	font-size: 1.2em;
+	width: 100%;
+	margin-bottom: 0.75rem;
+	font-family: "Open Sans";
+	font-style: italic;
+	color: #555555;
+	padding: 1.2rem 0 1.2rem 50px;
+	border-left: 8px solid black;
+	border-left-color: color-mix(in srgb, var(--contrast-color) 90%, grey);
+	line-height: 1.6;
+	position: relative;
+	background: #EDEDED;
+}
+
+.pitch-blockquote::before {
+	font-family: Arial;
+	content: "\201C";
+	color: color-mix(in srgb, var(--contrast-color) 90%, grey);
+	font-size: 4.5rem;
+	position: absolute;
+	left: 10px;
+	top: -10px;
+}
+
+.pitch-blockquote::after {
+	content: '';
+}
+
+.trailer-link {
+	background-color: var(--contrast-color);
+	color: white;
+	padding: 0.5rem 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 1rem;
+}
+
+.trailer-link > i {
+	font-size: 0.9em;
+	margin-left: 0.25rem;
+}
+
 .game-project > *:first-child > *:nth-child(3) {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-top: 0.5rem;
-}
-
-.game-project > *:first-child > *:nth-child(3) > * {
-	padding: 0.5rem 1rem;
-	background: none;
-	font-family: inherit;
-	border: 2px solid black;
-	font-weight: bold;
-	color: black;
-}
-
-.game-project > *:first-child > *:nth-child(3) > * > * {
-	transition: transform 0.2s ease;
+	margin-top: 1rem;
 }
 
 .image-carousel {
@@ -365,7 +441,8 @@ body {
 
 #contactSection > *:first-child > *:nth-child(4) {
 	margin-top: 3rem;
-	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
 }
 
 #contactSection > *:last-child > form > input,
@@ -488,4 +565,30 @@ body {
 	#footer > *:last-child > br {
 		display: none;
 	}
+}
+
+@media only screen and (max-width: 600px) {
+	.game-info-row {
+		justify-content: space-between;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.game-info-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		gap: 1rem;
+		text-align: center;
+	}
+
+	/*
+	.game-info-row > p {
+		text-align: center;
+	}
+
+	.game-info-row > p > i {
+		display: block;
+	}
+	*/
 }
