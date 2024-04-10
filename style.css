@@ -486,6 +486,23 @@ body {
 	margin-top: 0.5rem;
 }
 
+#specialization-steps > *:nth-child(4) {
+	display: grid;
+	grid-template-columns: auto 20%;
+	gap: 2rem;
+}
+
+#specialization-steps > *:nth-child(4) > *:last-child > img {
+	width: 100%;
+}
+
+#specialization-steps > *:nth-child(4) > *:last-child > p {
+	font-size: 0.8rem;
+	color: var(--text-color-2);
+	line-height: 0.9rem;
+	text-align: center;
+}
+
 #final-notes-section {
 	margin-top: 2.5rem;
 	display: grid;
@@ -509,7 +526,7 @@ body {
 }
 
 #final-notes-section > *:last-child > p {
-	color: var(--text-color-3);
+	color: var(--text-color-2);
 	text-align: center;
 }
 
@@ -643,6 +660,11 @@ body {
 
 	.game-project > *:last-child {
 		grid-row: 1 / 2;
+	}
+
+	#specialization-steps > *:nth-child(4) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
 	}
 
 	#final-notes-section {
