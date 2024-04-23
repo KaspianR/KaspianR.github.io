@@ -3,16 +3,21 @@
 });
 
 [...document.getElementsByClassName("expand-button")].forEach(e => {
-	e.addEventListener("click", ev => {
-		const section = [...e.parentElement.parentElement.children].at(e.parentElement.id === "about-me-expand-section" ? -2 : 1);
+	const section = [...e.parentElement.parentElement.children].at(e.parentElement.id === "about-me-expand-section" ? -2 : 1);
+	const resize = () => { section.style.height = section.children[0].clientHeight + "px"; };
 
+	e.addEventListener("click", ev => {
 		if (section.style.height) {
 			section.style.height = "";
 			e.children[0].style.transform = "";
+
+			window.removeEventListener("resize", resize);
 		}
 		else {
 			section.style.height = section.children[0].clientHeight + "px";
 			e.children[0].style.transform = "rotateZ(180deg)";
+
+			window.addEventListener("resize", resize);
 		}
 	});
 });
