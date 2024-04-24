@@ -44,5 +44,5 @@
 		div.style.left = `-${newValue}%`;
 	});
 	}
-	cetch(e) {}
+	catch(e) {}
 })
