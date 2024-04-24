@@ -23,6 +23,7 @@
 });
 
 [...document.getElementsByClassName("image-carousel")].map(carousel => [...carousel.children]).map(items => {
+	try {
 	const div = items[0];
 
 	items[1].addEventListener("click", ev => {
@@ -42,4 +43,6 @@
 		if (newValue / 100 >= div.childElementCount) newValue = 0;
 		div.style.left = `-${newValue}%`;
 	});
+	}
+	cetch(e) {}
 })
