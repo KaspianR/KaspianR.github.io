@@ -556,6 +556,17 @@ body {
 }
 
 #contactSection > *:first-child > *:nth-child(4) {
+	background-color: white;
+	color: black;
+	padding: 0.5rem 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 1rem;
+	font-weight: bold;
+}
+
+#contactSection > *:first-child > *:nth-child(5) {
 	margin-top: 3rem;
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
