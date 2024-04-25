@@ -171,6 +171,7 @@ body {
 
 #aboutMeSection > *:nth-child(2) {
 	margin-top: 2rem;
+	margin-bottom: 2rem;
 	display: grid;
 	grid-template-columns: 1fr 2px 1fr;
 	column-gap: 2rem;
@@ -203,6 +204,24 @@ body {
 
 #aboutMeSection > *:nth-child(2) > * > *:nth-child(1) {
 	text-align: center;
+}
+
+#aboutMeSection > *:nth-child(3) {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+#aboutMeSection > *:nth-child(3) > * {
+	padding: 0.5rem 1rem;
+	background: white;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#aboutMeSection > *:nth-child(3) > * > i {
+	margin-right: 0.25rem;
 }
 
 #about-me-expand-section {
@@ -543,6 +562,11 @@ body {
 	margin-bottom: 1rem;
 }
 
+#contactSection > *:first-child > *:nth-child(1) > * {
+	color: white;
+	text-decoration: none;
+}
+
 #contactSection > *:first-child > *:nth-child(2) {
 	font-size: 1.1rem;
 }
@@ -556,17 +580,6 @@ body {
 }
 
 #contactSection > *:first-child > *:nth-child(4) {
-	background-color: white;
-	color: black;
-	padding: 0.5rem 0.6rem;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	margin-top: 1rem;
-	font-weight: bold;
-}
-
-#contactSection > *:first-child > *:nth-child(5) {
 	margin-top: 3rem;
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
