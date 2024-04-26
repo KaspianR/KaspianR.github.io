@@ -516,11 +516,17 @@
 								</li>
 								<li><b>I create JSON files for all materials.</b> Our engine uses JSON files for each
 									material to keep track of all its textures, how metallic it is, etc., and creating
-									that manually was a pain and caused a lot of texture. We did create a tool for it in
-									our editor that we used for the game projects but I figured I'd add it to my tool as
-									well.</li>
-								<li><b>I keep track of the exported files in a JSON file.</b> This makes the process a
-									lot faster and prevents unused files from staying in the game.</li>
+									that manually was a pain and caused a lot of problems. We did create a tool for it
+									in our editor that we used for the game projects but I figured I'd add it to my tool
+									as well.</li>
+								<li><b>I keep track of the exported files in a JSON file.</b> I didn't have time to work
+									on this quite as much as I would have liked to because I was planning to store all
+									the exported files along with a hash to keep track of changes (alternatively I could
+									use the timestamp of the last edit in Windows but hashing would most likely be
+									better) and that way I wouldn't have to export the same file more than once. I still
+									do keep track of everything I've exported in a file to more easily remove files that
+									were used at one point but have been deleted since though however if I would have
+									had another week or two this is the part I would have kept working on.</li>
 							</ul>
 						</div>
 						<div>
@@ -551,9 +557,10 @@
 								biggest issue I encountered and didn't bother me as it gave me a chance to build my own
 								which was a good learning opportunity.<br><br>The only other thing I can really think of
 								that became a problem is that the tool can be a bit slow sometimes, especially when
-								converting textures to DDS, so if I was to continue working on it I would definitely try
-								to improve that either by looking at more efficient ways to use the converter or only
-								export it when something has changed.</p>
+								converting a large number of textures to DDS, so if I was to continue working on it I
+								would definitely try to improve that by either looking at more efficient ways to use the
+								converter or only exporting and converting the PNGs when something has changed (by using
+								hashes as explained above).</p>
 						</div>
 						<div>
 							<iframe src="https://www.youtube.com/embed/dmEbWYsf1LE"
