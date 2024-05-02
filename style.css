@@ -123,16 +123,36 @@ body {
 
 #landingSection-left-content > *:nth-child(3) {
 	width: 100%;
+	height: 6rem;
 	display: flex;
+	gap: 3rem;
 	justify-content: center;
-	margin-top: 0.5rem;
+	align-items: center;
 }
 
 #landingSection-left-content > *:nth-child(3) > * {
+	font-weight: bold;
+	color: black;
+}
+
+#landingSection-left-content > *:nth-child(3) > * > i {
+	text-decoration: none;
+	margin-right: 0.5rem;
+}
+
+#landingSection-left-content > *:nth-child(4) {
+	width: 100%;
+	padding: 0 0 1rem 0;
+}
+
+#landingSection-left-content > *:nth-child(4) > * {
 	font-size: 1.25rem;
+	text-align: center;
+}
+
+#landingSection-left-content > *:nth-child(4) > * > * {
 	text-decoration: none;
 	color: inherit;
-	margin: 7rem 0 1rem 0;
 }
 
 .magic-text {
@@ -158,6 +178,7 @@ body {
 	padding: 3rem calc((100% - var(--center-width)) / 2);
 	color: white;
 	text-align: center;
+	font-size: 1.1rem;
 }
 
 #aboutMeSection > *:nth-child(1) > *:nth-child(1) {
@@ -186,10 +207,6 @@ body {
 	margin-bottom: 0.5rem;
 }
 
-#aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) > *:nth-child(2) {
-	font-size: 1.1rem;
-}
-
 #aboutMeSection > *:nth-child(2) > *:nth-child(2n+1) a {
 	color: inherit;
 }
@@ -207,21 +224,9 @@ body {
 }
 
 #aboutMeSection > *:nth-child(3) {
-	display: flex;
-	gap: 1rem;
-	justify-content: center;
-}
-
-#aboutMeSection > *:nth-child(3) > * {
-	padding: 0.5rem 1rem;
-	background: white;
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-#aboutMeSection > *:nth-child(3) > * > i {
-	margin-right: 0.25rem;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.2s ease;
 }
 
 #about-me-expand-section {
@@ -234,6 +239,31 @@ body {
 #about-me-expand-section > * {
 	background: white;
 	border: none;
+}
+
+#programming-journey-div > *:first-child {
+	margin-bottom: 1rem;
+}
+
+#programming-journey-div > *:last-child {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto;
+	row-gap: 2rem;
+	column-gap: 2rem;
+}
+
+#programming-journey-div > *:last-child > * {
+	background-color: var(--background-color-1);
+	color: var(--text-color-1);
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 3rem auto;
+	column-gap: 1rem;
+}
+
+#programming-journey-div > *:last-child > * > * {
+	text-align: left;
 }
 
 .expand-button {

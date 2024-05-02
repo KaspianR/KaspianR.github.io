@@ -1,4 +1,7 @@
-﻿window.addEventListener('scroll', ev => {
+﻿// Don't judge me on this please. We did not have much time to work on our portfolios so the code for this whole website
+// is very rushed and at times even written on phone so there are lots of better ways to do this, the HTML, and the CSS
+
+window.addEventListener('scroll', ev => {
 	document.getElementById("nav-bar").style.borderColor = this.scrollY === 0 ? `transparent` : `black`;
 });
 
@@ -24,25 +27,25 @@
 
 [...document.getElementsByClassName("image-carousel")].map(carousel => [...carousel.children]).map(items => {
 	try {
-	const div = items[0];
+		const div = items[0];
 
-	items[1].addEventListener("click", ev => {
-		const leftString = div.style.left || "0%";
-		const leftNumber = Number(leftString.match(/[0-9]+/)[0]);
+		items[1].addEventListener("click", ev => {
+			const leftString = div.style.left || "0%";
+			const leftNumber = Number(leftString.match(/[0-9]+/)[0]);
 
-		let newValue = leftNumber - 100;
-		if (newValue < 0) newValue = (div.childElementCount - 1) * 100;
-		div.style.left = `-${newValue}%`;
-	});
+			let newValue = leftNumber - 100;
+			if (newValue < 0) newValue = (div.childElementCount - 1) * 100;
+			div.style.left = `-${newValue}%`;
+		});
 
-	items[2].addEventListener("click", ev => {
-		const leftString = div.style.left || "0%";
-		const leftNumber = Number(leftString.match(/[0-9]+/)[0]);
+		items[2].addEventListener("click", ev => {
+			const leftString = div.style.left || "0%";
+			const leftNumber = Number(leftString.match(/[0-9]+/)[0]);
 
-		let newValue = leftNumber + 100;
-		if (newValue / 100 >= div.childElementCount) newValue = 0;
-		div.style.left = `-${newValue}%`;
-	});
+			let newValue = leftNumber + 100;
+			if (newValue / 100 >= div.childElementCount) newValue = 0;
+			div.style.left = `-${newValue}%`;
+		});
 	}
-	catch(e) {}
+	catch (e) { }
 })
