@@ -293,6 +293,7 @@ body {
 
 #programming-journey-div > *:last-child > *:nth-child(3n+2) > *:nth-child(3) {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin-top: 0.5rem;
 }
