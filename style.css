@@ -734,6 +734,11 @@ body {
 	color: black;
 }
 
+#contactSection > *:last-child > form > input[type=submit][disabled] {
+	background: rgba(239, 239, 239, 0.3);
+	color: white;
+}
+
 #footer {
 	background-color: color-mix(in srgb, color-mix(in srgb, var(--contrast-color) 25%, white) 20%, black);
 	padding: 3rem calc((100% - var(--center-width)) / 2);
